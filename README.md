@@ -1,4 +1,4 @@
-# WAD-QA-Automation-Engineer-Assesment
+WAD-QA-Automation-Engineer-Assesment
 
 Tech Stack
 - Playwright Test
