@@ -7,12 +7,13 @@ Tech Stack
 - UI & API testing
 
 
-Run Tests:
-npx playwright test
+Command for Run the Tests:
+  npx playwright test
 
 
 
-Folder Structure
+Folder Structure:
+
 pages/: Page Objects
 
 tests/ui: UI test cases
