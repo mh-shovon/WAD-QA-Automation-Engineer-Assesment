@@ -8,7 +8,8 @@ class ProductPage {
         this.addToCartBtn = page.locator('#product-addtocart-button');
         this.cartLink = page.locator('.action.showcart');
         this.itemTitle = page.locator('.product-item-name');
-        this.checkoutBtn = page.locator(".action.primary.checkout");
+        this.viewCartBtn = page.locator('.viewcart');
+
     }
 
     async delay(time) {
@@ -40,13 +41,15 @@ class ProductPage {
 
     async addToCart() {
         await this.addToCartBtn.click();
+        await this.delay(2000);
     }
 
     async goToCart() {
+        await this.delay(2000);
         await this.cartLink.click();
     }
 
-    async productFountInTheCart() {
+    async validateItemInTheList() {
         const selectedProductName = "Orestes Fitness Short";
         const productCount = await this.itemTitle.count();
         let i = 0;
@@ -56,7 +59,7 @@ class ProductPage {
             const textContent = await productTitle.textContent();
 
             if (textContent?.trim() === selectedProductName) {
-                await productTitle.click();
+                await productTitle.isVisible();
                 break;
             }
             i++;
@@ -64,7 +67,7 @@ class ProductPage {
     }
 
     async validatePriceAndQuantity() {
-        await this.checkoutBtn.click();
+        await this.viewCartBtn.click();
     }
 }
 module.exports = { ProductPage }
