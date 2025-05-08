@@ -13,4 +13,5 @@ test('Add and remove product from cart', async ({ page }) => {
 
     await productPage.goToCart();
     await productPage.productFountInTheCart();
+    await productPage.validatePriceAndQuantity();
 });
