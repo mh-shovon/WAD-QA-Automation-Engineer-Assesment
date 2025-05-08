@@ -16,7 +16,7 @@ class HomePage {
     async searchProduct(keyword) {
         await this.searchInput.fill(keyword);
         await this.searchInput.press('Enter');
-        await this.delay(2000);
+        await this.delay(1000);
     }
 
     async getResults() {
