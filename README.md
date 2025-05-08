@@ -6,8 +6,11 @@ Tech Stack
 - Page Object Model
 - UI & API testing
 
+
 Run Tests:
 npx playwright test
+
+
 
 Folder Structure
 pages/: Page Objects
